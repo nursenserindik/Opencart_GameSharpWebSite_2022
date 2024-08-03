@@ -1,0 +1,9 @@
+@media (max-width: 1279px) {
+  /* Blog layout: Portfolio */
+  .post_layout_portfolio.sticky:not(.post_layout_custom) {
+    padding: 5px; } }
+
+@media (max-width: 1023px) {
+  /* Blog layout: Portfolio */
+  .post_layout_portfolio .post_featured .post_info {
+    padding: 30px; } }

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,yBAAoB;EACnB,mEAAoE;IACnE,aAAa,EAAE,KAAK;;;EAErB,8DAA+D;IAC3D,OAAO,EAAE,KAAK;;;EAElB;sEACqE;IACjE,OAAO,EAAE,MAAM;;;EAEnB,oEAAqE;IACjE,YAAY,EAAE,KAAK",
+"sources": ["style-13-responsive.scss"],
+"names": [],
+"file": "style-13-responsive.css"
+}

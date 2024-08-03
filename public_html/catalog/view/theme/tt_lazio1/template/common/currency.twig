@@ -1,0 +1,41 @@
+{% if currencies|length > 1 %}
+<form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-currency">
+	<div class="currency">
+		<label>{{ text_currency }}</label>
+	  <button class="btn btn-link dropdown-toggle btn-currency" data-toggle="dropdown">{% for currency in currencies %}
+      {% if currency.symbol_left and currency.code == code %} <strong>{{ currency.code }}</strong> {% elseif currency.symbol_right and currency.code == code %} <strong>{{ currency.symbol_right }}</strong> {% endif %}
+      {% endfor %}<i class="ion-arrow-down-b"></i></button>
+	  <ul class="dropdown-menu">
+		{% for currency in currencies %}
+		{% if currency.code == code %}
+		<li>
+		  <button class="item-selected currency-select btn btn-link btn-block" type="button" name="{{ currency.code }}">
+			{% if currency.symbol_left %} 
+				{{ currency.symbol_left }}
+			{% endif %}			
+			{{ currency.title }}
+			{% if currency.symbol_right %} 
+				{{ currency.symbol_right }}
+			{% endif %}
+		</button>
+		</li>
+		{% else %}
+		<li>
+		  <button class="currency-select btn btn-link btn-block" type="button" name="{{ currency.code }}">
+			{% if currency.symbol_left %} 
+				{{ currency.symbol_left }}
+			{% endif %}			
+			{{ currency.title }}
+			{% if currency.symbol_right %} 
+				{{ currency.symbol_right }}
+			{% endif %}
+		  </button>
+		</li>
+		{% endif %}
+		{% endfor %}
+	  </ul>
+	</div>
+	<input type="hidden" name="code" value="" />
+	<input type="hidden" name="redirect" value="{{ redirect }}" />
+</form>
+{% endif %} 

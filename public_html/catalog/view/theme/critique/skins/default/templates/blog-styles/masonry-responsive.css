@@ -1,0 +1,47 @@
+@media (max-width: 1439px) {
+  /* Blog layout: Masonry */
+  .masonry_wrap .masonry_item-1_4 {
+    width: 33.3333%; } }
+
+@media (max-width: 1023px) {
+  /* Blog layout: Masonry */
+  .masonry_wrap {
+    margin-right: calc( -1 * var(--theme-var-grid_gap)); }
+  .masonry_wrap .masonry_item {
+    padding: 0 var(--theme-var-grid_gap) var(--theme-var-grid_gap) 0; }
+  .masonry_wrap .masonry_item-1_3,
+  .masonry_wrap .masonry_item-1_4 {
+    width: 50%; } }
+
+@media (max-width: 767px) {
+  /* Blog layout: Masonry */
+  .masonry_wrap {
+    margin-right: calc( -1 * ( var(--theme-var-grid_max_columns) - 1 ) * var(--theme-var-grid_gap)); }
+  .masonry_wrap .masonry_item {
+    padding: 0 calc( ( var(--theme-var-grid_max_columns) - 1 ) * var(--theme-var-grid_gap)) var(--theme-var-grid_gap) 0; }
+  .masonry_wrap .masonry_item-1_2,
+  .masonry_wrap .masonry_item-1_3,
+  .masonry_wrap .masonry_item-1_4 {
+    width: calc( 100% / var(--theme-var-grid_max_columns)); } }
+
+@media (max-width: 600px) {
+  /* Blog layout: Masonry */
+  .masonry_wrap {
+    margin-right: calc( -1 * ( var(--theme-var-grid_max_columns) - 1 ) * var(--theme-var-grid_gap)); }
+  .masonry_wrap .masonry_item {
+    padding: 0 calc( ( var(--theme-var-grid_max_columns) - 1 ) * var(--theme-var-grid_gap)) var(--theme-var-grid_gap) 0; }
+  .masonry_wrap .masonry_item-1_2,
+  .masonry_wrap .masonry_item-1_3,
+  .masonry_wrap .masonry_item-1_4 {
+    width: calc( 100% / var(--theme-var-grid_max_columns)); } }
+
+@media (max-width: 479px) {
+  /* Blog layout: Masonry */
+  .masonry_wrap {
+    margin-right: calc( -1 * ( var(--theme-var-grid_max_columns) - 1 ) * var(--theme-var-grid_gap)); }
+  .masonry_wrap .masonry_item {
+    padding: 0 calc( ( var(--theme-var-grid_max_columns) - 1 ) * var(--theme-var-grid_gap)) var(--theme-var-grid_gap) 0; }
+  .masonry_wrap .masonry_item-1_2,
+  .masonry_wrap .masonry_item-1_3,
+  .masonry_wrap .masonry_item-1_4 {
+    width: calc( 100% / var(--theme-var-grid_max_columns)); } }

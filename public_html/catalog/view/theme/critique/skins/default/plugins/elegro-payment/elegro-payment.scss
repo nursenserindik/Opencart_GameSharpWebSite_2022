@@ -1,0 +1,28 @@
+/* Elegro Crypto payment styles
+----------------------------------------------------------------- */
+
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+#modal {
+	position: static !important;
+	background: none !important;
+	overflow: visible;
+	padding: 0 !important;
+
+	#elegro-reset-wrapper {
+		margin: 2em 0 3em;
+	}
+	#elegro-reset-wrapper .elegro-widget {
+		margin: 0 !important;
+	}
+}
+#modal:not(:empty) + #btn-buy,
+#modal:not(:empty) ~ #btn-buy  {
+	display: none;
+}
+#elegro-reset-wrapper .elegro-widget__button {
+	font-family: "Karla",sans-serif!important;
+	font-size: 13px!important;
+}

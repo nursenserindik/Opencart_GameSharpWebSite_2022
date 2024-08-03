@@ -1,0 +1,235 @@
+* {
+	letter-spacing: 0 !important;
+}
+
+/* Menu */
+.amp-wp-header .nav_container {
+	float: right;
+	left: 39px;
+	right: auto;
+}
+.toggle-text {
+	left: auto;
+	right: 0;
+}
+
+.close-nav {
+	left: 0px;
+	right: auto;
+}
+
+.amp-menu .toggle:after {
+	padding: 10px 30px 10px 15px;
+}
+.toggle-navigationv2 ul li a {
+	padding: 10px 25px 10px 15px;
+}
+.toggle-navigationv2 ul ul li a {
+	padding-right: 35px;
+	padding-left: 15px;
+}
+
+/* Seacrh */
+.searchmenu {
+	left: 60px;
+	right: auto;
+}
+.icono-search {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	margin: 4px 8px 8px 4px;
+}
+.icono-search:before {
+    right: 15px;
+    left: auto;
+}
+.searchform {
+	right: 50%;
+	left: auto;
+	-webkit-transform: translate(50%, -50%);
+	-ms-transform: translate(50%, -50%);
+	transform: translate(50%, -50%);
+}
+.searchform input {
+	padding: 20px 30px 20px 0px;
+}
+
+/* Article */
+.amp-wp-article-header .amp-wp-meta.amp-wp-tax-tag {
+	display: flex;
+	justify-content: flex-end;
+}
+.amp-wp-article-header .amp-wp-meta.amp-wp-tax-tag > .tt-lb {
+	order: 1;
+	margin-left: 2px;
+}
+.amp-wp-article-header .amp-wp-meta.amp-wp-tax-tag > [class*="amp-tag"] {
+	order: 2;
+}
+.amp-wp-article-header .amp-wp-meta.amp-wp-tax-tag > [class*="amp-tag"]:after {
+	margin-left: 3px;
+}
+.amp-wp-article-header .amp-wp-meta.amp-wp-tax-tag > [class*="amp-tag"]:last-of-type:after {
+	display: none;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-right: 0;
+}
+
+.breadcrumb ul li a:after {
+	transform: scaleX(-1);
+}
+
+/* Blogger */
+.sc_blogger .columns_in_single_row .trx_addons_column-1_2 {
+	padding-left: 30px;
+	padding-right: 0;
+}
+.sc_blogger_item_list .post_featured {
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+/* Post pagination */
+#pagination .next {
+	text-align: left;
+	padding-right: 23px;
+	padding-left: 0;
+}
+#pagination .prev {
+	padding-left: 23px;
+	padding-right: 0;
+}
+
+/* Comments */
+.cmt-author-img {
+	margin-left: 20px;
+	margin-right: 0;
+}
+.cmt-meta .cmt-metadata {
+	margin-right: 10px;
+	margin-left: 0;
+}
+
+/* Blockquote */
+blockquote {
+	padding: 0 20px 0 0;
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-left: 0;
+}
+
+/* Reviews */
+.trx_addons_reviews_block_mark_text {
+	margin-right: 0.5em;
+	margin-left: 0;
+}
+.trx_addons_reviews_block_pn .trx_addons_reviews_block_positives,
+.trx_addons_reviews_block_pn .trx_addons_reviews_block_negatives {
+	text-align: right;
+}
+.trx_addons_reviews_block_pn .trx_addons_reviews_block_list {
+	padding-right: 1.3em;
+	padding-left: 0;
+}
+.trx_addons_reviews_block_pn .trx_addons_reviews_block_list li:before {
+	right: -0.8em;
+	left: auto;
+}
+.trx_addons_reviews_block_criterias .trx_addons_reviews_block_list_title {
+	right: 3px;
+	left: auto;
+	text-align: right;
+	padding-left: 4em;
+	padding-right: 0;
+}
+.trx_addons_reviews_block_criterias[data-mark-max="100"] .trx_addons_reviews_block_list_mark_value:after {
+	margin-right: 0.2em;
+	margin-left: 0;
+}
+.trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_title,
+.trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link .sc_button_text,
+.trx_addons_reviews_block_attributes_row_type_button > .trx_addons_reviews_block_attributes_title {
+	padding-left: 1em;
+	padding-right: 0;
+}
+.trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_value,
+.trx_addons_reviews_block_attributes_row_type_button .trx_addons_reviews_block_attributes_value {
+	padding-right: 1em;
+	padding-left: 0;
+}
+.trx_addons_reviews_block_attributes_row_type_button a .trx_addons_reviews_block_attributes_value:before {
+	margin-left: 1em;
+	margin-right: 0;
+}
+
+/* Related Posts */
+.relatedpost ol li amp-img {
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+/* Socials */
+.amp-wp-article amp-addthis {
+	margin: 0 -9px 0 0;
+}
+
+/* Notification */
+amp-user-notification button {
+	margin-right: 5px;
+	margin-left: 0;
+}
+
+/* Archive styles */
+.amp-wp-home .home-post-image {
+	float: right;
+	margin: 7px 0 0 20px;
+}
+
+/* Misc */
+amp-addthis.i-amphtml-element {
+	margin-right: -50px;
+}
+
+.at-inl {
+	direction: rtl;
+	float: right;
+}
+
+.btt {
+	left: 20px;
+	right: auto;
+}
+
+/* Author */
+.single-post .amp_author_area amp-img {
+	float: right;
+	margin-left: 12px;
+	margin-right: 0;
+}
+
+/* Comments */
+.cmts_list ul.children {
+	margin-right: 4%;
+	margin-left: 0;
+}
+
+/* Aligment */
+@media (max-width: 599px) {
+	#pagination .next {
+		text-align: right;
+		padding-right: 0;
+	}
+	#pagination .prev {
+		padding-left: 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.cmt-meta .cmt-metadata {
+		margin-right: 0;
+	}
+}

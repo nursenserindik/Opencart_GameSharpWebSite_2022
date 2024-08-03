@@ -1,0 +1,193 @@
+/* Buttons hovers
+------------------------------------------------------------------ */
+
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+// This way via gradient
+[class*="sc_button_hover_slide"] {
+	@include transition-all;
+}
+.sc_button_hover_just_init {
+	@include transition(none !important);
+}
+
+[class*="sc_button_hover_"]:not(.sc_button_bg_image) {
+	@include transition(color 0.3s ease, border-color 0.3s ease, background-position 0.3s ease, background-color 0s linear 0.3s);
+}
+
+
+/* Images (post featured) hovers
+----------------------------------------------------- */
+.post_featured[class*="hover_"] {
+	position: relative;
+	@include transition-all(0.35s, ease-in-out);
+}
+// Next two rules need for images with width less then content area - in that case the hover mask is wider then image
+.post_featured:not(.post_featured_bg)[class*="hover_"] {
+	display: inline-block;
+	vertical-align: top;
+}
+.post_featured[class*="hover_"],
+.post_featured[class*="hover_"] * {
+	@include border-box;
+}
+// Uncomment this if you want to stretch images to the block's width
+//.post_featured[class*="hover_"] img {
+//	@include box(100%, auto);
+//}
+.post_featured .mask {
+	content: ' ';
+	@include abs-cover(4);
+	opacity: 0;
+	pointer-events: none;
+	@include transition-all(0.5s);
+}
+.post_featured .post_info {
+	@include abs-lt(50%, 50%, 6);
+	@include transform(translate(-50%, -50%) scale(0.5, 0.5));
+	@include transition-all(0.5s);
+	display:none;
+	font-size:1.1429em;
+	line-height:1.3em;
+	width:90%;
+	text-align:center;
+	margin:-1em auto 0;
+	opacity: 0;
+}
+.post_featured .post_link {
+	@include abs-cover(-1);
+}
+
+.format-video .post_featured .icon,
+.format-gallery .post_featured .icon {
+	display: none;
+}
+
+/* Hover: empty */
+.post_featured.hover_ .icons {
+	@include abs-cover(7);
+}
+
+/* Hover Shop (icons) */
+.post_featured.hover_shop {
+	position:relative;
+	display:block;
+}
+.post_item:hover .post_featured.hover_shop .mask,
+.post_item:hover .post_featured.hover_shop:hover .mask {
+	opacity: 1;
+	display: none!important;
+}
+.post_featured.hover_shop .icons {
+	@include abs-lt(0, 50%, 1002);
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	width: 100%;
+	pointer-events: none;
+}
+.post_featured.hover_shop .icons a {
+	position: relative;
+	top: 20px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+	pointer-events: all;
+	font-size:1.2632em !important;
+	padding:0 !important;
+	letter-spacing:0 !important;
+	cursor:pointer;
+	text-align:center;
+	color: var(--theme-color-extra_bg_color) !important;
+	background-color: var(--theme-color-extra_dark) !important;
+	opacity: 0;
+	border: 0!important;
+	box-shadow: none!important;
+	@include box(51px!important, 51px!important, 51px!important);
+	@include border-radius(50%!important);
+	@include transition(all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s);
+}
+.post_featured.hover_shop .icons a:hover {
+	color: var(--theme-color-extra_dark) !important;
+	border-color: var(--theme-color-extra_hover) !important;
+	background-color: var(--theme-color-extra_hover) !important;
+	box-shadow: none!important;
+}
+.post_featured.hover_shop .icons a.added_to_cart {
+	display:none;
+}
+.post_featured.hover_shop .icons a.product_out_stock:not(.product_type_external) {
+	display: none !important;
+}
+.product-category .post_featured.hover_shop .icons a,
+.post_featured.hover_shop .icons a.product_out_stock:not(.product_type_external) + a {
+	margin-left: 0;
+	@include transition-delay(0s);
+}
+.post_featured.hover_shop .icons a+a,
+.post_featured.hover_shop .icons a+a+a {
+	margin-left: 9px;
+	@include transition-delay(.15s);
+}
+.post_featured.hover_shop .icons a.shop_link:before {
+	font-family: $theme_icons !important;
+	font-weight:400 !important;
+	content:'\e9c8' !important;
+	font-size: 1.3rem;
+}
+.post_featured.hover_shop .icons a.shop_cart:before {
+	font-family: $theme_icons !important;
+	font-weight:400 !important;
+	content:'\e9be' !important;
+	font-size: 1.5rem;
+}
+.post_featured.hover_shop .icons a.shop_cart:after {
+	display: none!important;
+}
+.post_featured.hover_shop .icons a.added_to_cart,
+.woocommerce a.added_to_cart {
+	text-indent: -1000px;
+	overflow: hidden;
+}
+.post_featured.hover_shop .icons a.added_to_cart:after,
+.woocommerce a.added_to_cart:after {
+	font-family: $theme_icons !important;
+	font-weight:400 !important;
+	content:'\e855' !important;
+	font-size: 1.5rem;
+	text-indent: 0;
+	@include abs-cc();
+}
+.post_featured.hover_shop .icons a:before,
+.post_featured.hover_shop .icons a:after {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.post_item:hover .post_featured.hover_shop,
+.post_featured.hover_shop:hover,
+.post_item:focus .post_featured.hover_shop,
+.post_featured.hover_shop:focus {
+	@for $i from 1 through 3 {
+
+	.icons a {	    
+	     
+	    &:nth-child(#{$i}) {
+	    	animation: animation_fade_in_up 0.3s ease forwards;
+	    	animation-delay: $i * 0.05s;
+	    }
+	  }
+	}
+}
+.post_item:hover .post_featured.hover_shop .icons a,
+.post_featured.hover_shop:hover .icons a {
+	@include transition(all .4s);
+}
+.post_item:hover .post_featured.hover_shop .icons a+a,
+.post_item:hover .post_featured.hover_shop .icons a+a+a,
+.post_featured.hover_shop:hover .icons a+a,
+.post_featured.hover_shop:hover .icons a+a+a {
+	@include transition-delay(.15s);
+}

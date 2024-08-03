@@ -1,0 +1,115 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+.single_style_style-8  {
+	 .page_content_wrap {
+		padding-top: 2.45em;
+	} 
+
+	/* Banners */
+	.after_header_banner_wrap {
+	    margin-top: 2.5em;
+	}
+	.content .before_post_header_banner_wrap {
+	    margin-bottom: 2.9em;
+	}
+	.content .after_post_header_banner_wrap {
+	    margin-bottom: 2.7em;
+	}
+} 
+
+.post_header_wrap_style_style-8 {
+    margin-bottom: 2.65em;
+
+	/* Featured */	
+	.post_featured {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.post_featured.post_featured_bg {
+		height: 57rem;
+	}
+	.post_featured.post_featured_bg:before {
+		display: none;
+	}
+	.post_featured img {
+		max-width: none;
+		width: 100%;
+	}
+	.post_audio_btn {
+		@include abs-cc;
+		z-index: 3;
+	}
+
+	/* Header */
+	.post_header .post_subtitle {
+		margin-top: 0.7em;
+	}
+	.post_header .post_meta_categories {
+		margin-bottom: 1.95em;
+	    margin-top: 0;
+	}
+	.post_header .post_meta_categories .post_categories,
+	.post_header .post_meta_categories .post_categories a {
+		font-weight: 500;
+		color: var(--theme-color-text);
+	}
+	.post_header .post_meta_categories .post_categories a:hover {
+		color: var(--theme-color-text_dark);	
+	}
+	
+	.post_header .post_meta_other {
+		@include flex-align-items(center);
+		@include flex-direction(row);
+		@include flex-justify-content(space-between);
+		@include flex-wrap(wrap);
+		@include flex;
+	    border-top: 1px solid var(--theme-color-bd_color);
+	    margin-top: 1.5em;
+	    padding-top: 1em;
+	}
+	 .post_header .post_meta_other_part1 {
+		@include flex-align-items(center);
+		@include flex-direction(row);
+		@include flex-justify-content(flex-start);
+		@include flex-wrap(wrap);
+		@include flex;
+	}
+	.post_header .post_meta_other_part2 {
+		@include flex-align-items(center);
+		@include flex-direction(row);
+		@include flex-grow(1);
+		@include flex-justify-content(flex-end);
+		@include flex-wrap(nowrap);
+		@include flex;
+	}
+	.post_header .post_meta_item .post_meta_number + .post_meta_label {
+	    display: inline-block;
+	}
+
+	/* Sidebar */
+	&.with_featured_image + .content_wrap .content + .sidebar:not(.sidebar_fixed_placeholder) {
+	    margin-top: 2em;
+	}
+}
+
+.sidebar_hide .post_header_wrap_style_style-8 {
+	/* Featured Audio */
+	.post_featured.with_audio.without_thumb {
+	    margin-left: auto;
+	    margin-right: auto;
+	    max-width: 100%;    
+	    left: auto;
+	    width: var(--theme-var-content_narrow);
+	}
+}
+
+/* Banner */
+.sidebar_present .post_header_wrap_style_style-8 {
+	&.with_featured_image + .content_wrap .content  {
+		.before_post_header_banner_wrap {
+	    	margin-top: 2em;
+		}
+	}
+}

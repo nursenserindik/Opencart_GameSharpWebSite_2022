@@ -1,0 +1,49 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+@media #{$media_lg} {
+	.post_featured.hover_shop .icons a {
+		top: 0;
+		animation-name: none;
+	}
+}
+
+@media #{$media_md} {
+	/* Theme Hovers */
+	[class*="column-1_3"] .post_featured.hover_info .post_info .post_descr,
+	[class*="column-1_4"] .post_featured.hover_info .post_info .post_descr,
+	[class*="masonry_item-1_3"] .post_featured.hover_info .post_info .post_descr {
+		display: none;
+	}
+	.post_featured.hover_shop .icons a {
+		@include box(42px!important, 42px!important, 42px!important);
+	}
+}
+
+@media #{$media_sm} {
+	/* Theme Hovers */
+	[class*="column-1_3"] .post_featured.hover_info .post_info .post_descr,
+	[class*="column-1_4"] .post_featured.hover_info .post_info .post_descr,
+	[class*="masonry_item-1_3"] .post_featured.hover_info .post_info .post_descr {
+		display: block;
+	}
+	.post_featured.hover_shop .icons a {
+		width: 3rem!important;
+		height: 3rem!important;
+	}
+}
+
+@media #{$media_xs} {
+	/* Theme Hovers */
+	.post_featured.hover_border .post_info .post_info_back	{
+		padding: 2.5em;
+	}
+	.post_featured.hover_border .post_info:before,
+	.post_featured.hover_border .post_info:after {
+		@include abs-pos(20px, 20px, 20px, 20px);
+	}
+	.post_featured.hover_border .post_info .post_title {
+		padding-bottom: 4px;
+	}
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <code>SimplicaTheme</code>
+  <name>Simplica Theme</name>
+  <version>1.0</version>
+  <author>HarnishDesign</author>
+  <link>http://www.harnishdesign.net</link>
+  
+  <file path="catalog/view/theme/simplica/template/common/cart.twig">
+    <operation>
+      <search>
+        <![CDATA[<div id="cart" class="btn-group btn-block">]]>
+      </search>
+      <add position="replace">
+        <![CDATA[<div id="cart" class="btn-group">]]>
+      </add>
+    </operation>
+  </file>
+  <!-- OwlCarousel-->
+  <file path="catalog/controller/extension/module/{carousel,banner}*.php">
+    <operation>
+      <search>
+        <![CDATA[$this->document->addStyle('catalog/view/javascript/jquery/swiper/css/opencart.css');]]>
+      </search>
+      <add position="replace">
+        <![CDATA[$this->document->addStyle('catalog/view/theme/simplica/stylesheet/swiper.opencart.css');]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/extension/module/slideshow.php">
+    <operation>
+      <search>
+        <![CDATA[$this->document->addStyle('catalog/view/javascript/jquery/swiper/css/opencart.css');]]>
+      </search>
+      <add position="replace">
+        <![CDATA[$this->document->addStyle('catalog/view/theme/simplica/stylesheet/swiper.opencart.css');]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/simplica/template/common/footer.twig">
+    <operation>
+      <search>
+        <![CDATA[<p>{{ powered }}</p>]]>
+      </search>
+      <add position="replace">
+        <![CDATA[<p class="pull-left">{{ powered }}</p><p class="pull-right">OpenCart Theme By <a href="https://goo.gl/NKXdWy">HarnishDesign</a></p>]]>
+      </add>
+    </operation>
+  </file>
+</modification>

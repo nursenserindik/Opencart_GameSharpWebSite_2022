@@ -1,0 +1,21 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+@media #{$media_lg} {
+	/* Blog layout: Portfolio */
+
+	.post_layout_portfolio.sticky:not(.post_layout_custom) {
+	    padding: 5px;
+	}
+}
+
+@media #{$media_md} {
+	/* Blog layout: Portfolio */
+
+	.post_layout_portfolio {
+	    .post_featured .post_info{	    	
+	        padding: 30px;
+	    }
+	}
+}

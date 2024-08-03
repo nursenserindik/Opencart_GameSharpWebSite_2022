@@ -1,0 +1,34 @@
+/* Contact form 7 styles
+----------------------------------------------------------------- */
+div.wpcf7-response-output {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 2em 0;
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: var(--theme-color-input_text);
+  letter-spacing: 0;
+  padding: 17px 30px;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-radius: var(--theme-var-rad);
+  -ms-border-radius: var(--theme-var-rad);
+  border-radius: var(--theme-var-rad); }
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  color: var(--theme-color-text_link);
+  border-color: var(--theme-color-text_link); }
+
+div.wpcf7-mail-sent-ok {
+  color: #398f14; }
+
+span.wpcf7-not-valid-tip {
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: var(--theme-color-text_link);
+  letter-spacing: 0;
+  padding-left: 2.2rem;
+  margin-top: 0.5rem; }

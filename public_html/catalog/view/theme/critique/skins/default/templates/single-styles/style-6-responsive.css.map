@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,0BAAoB;EACnB;;6DAE4D;IACxD,SAAS,EAAE,GAAG;;;AAInB,yBAAoB;EACnB,2EAA4E;IAC3E,OAAO,EAAE,eAAc;;;EAExB;;6DAE4D;IACxD,SAAS,EAAE,GAAG;;;AAInB,yBAAoB;EACnB,6DAA8D;IAC1D,OAAO,EAAE,KAAK;;;EAElB;qEACoE;IAChE,OAAO,EAAE,MAAM;;;EAEnB,mEAAoE;IAChE,YAAY,EAAE,KAAK",
+"sources": ["style-6-responsive.scss"],
+"names": [],
+"file": "style-6-responsive.css"
+}

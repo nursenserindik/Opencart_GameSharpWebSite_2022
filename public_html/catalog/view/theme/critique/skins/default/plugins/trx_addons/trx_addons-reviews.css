@@ -1,0 +1,326 @@
+/* ThemeREX Addons
+------------------------------------------------------------------------------------ */
+.trx_addons_reviews_bubble {
+  background-color: var(--theme-color-bg_color); }
+
+.trx_addons_reviews_bubble:before {
+  background-color: var(--theme-color-bg_color);
+  border-bottom-color: var(--theme-color-bd_color);
+  border-right-color: var(--theme-color-bd_color); }
+
+/* Reviews in the single post */
+.trx_addons_reviews_block_short,
+.trx_addons_reviews_block_detailed {
+  background-color: var(--theme-color-bg_color);
+  border: 1px solid var(--theme-color-bd_color);
+  color: var(--theme-color-text); }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_image img,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_image img {
+    width: 100%; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_info,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_info {
+    color: inherit;
+    background-color: transparent; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_mark,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark {
+    width: 8.714rem;
+    height: 8.714rem; }
+    .trx_addons_reviews_block_short .trx_addons_reviews_block_mark canvas,
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark canvas {
+      left: calc(50% + 1px);
+      -webkit-transform: rotate(-90deg) translateY(-50%) translateX(25%) scale(0.5);
+      -ms-transform: rotate(-90deg) translateY(-50%) translateX(25%) scale(0.5);
+      transform: rotate(-90deg) translateY(-50%) translateX(25%) scale(0.5); }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_mark_content,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark_content {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    width: 17.42rem;
+    height: 17.42rem;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 8px solid var(--theme-color-bg_color);
+    -webkit-transform: translateY(-25%) translateX(-25%) scale(0.5);
+    -ms-transform: translateY(-25%) translateX(-25%) scale(0.5);
+    transform: translateY(-25%) translateX(-25%) scale(0.5); }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_mark_value,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark_value {
+    color: var(--theme-color-text_dark);
+    width: auto;
+    height: auto;
+    line-height: 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 6.28rem; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_mark_value[data-max-value="100"]:after,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark_value[data-max-value="100"]:after {
+    font-size: 1.5rem;
+    margin: -0.5em -0.3em 0 0.2em; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_mark_text,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark_text {
+    width: 86%;
+    margin: 0 auto;
+    color: var(--theme-color-text_dark);
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row + .trx_addons_reviews_block_attributes_row,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row + .trx_addons_reviews_block_attributes_row {
+    margin-top: 1.07em; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_link .sc_button_icon,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_link .sc_button_icon {
+    display: none; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_value,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_value {
+    font-weight: 400; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_button,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_button {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 1.142rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    color: var(--theme-color-alter_dark);
+    letter-spacing: -0.02em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link {
+    width: 100%; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link:hover,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link:hover {
+    color: var(--theme-color-alter_hover); }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_title,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link .sc_button_text,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_value,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_line,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_button > .trx_addons_reviews_block_attributes_title,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_title,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link .sc_button_text,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_value,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_line,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_button > .trx_addons_reviews_block_attributes_title {
+    display: inline-block;
+    vertical-align: top;
+    width: auto; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_title,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link .sc_button_text,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_button > .trx_addons_reviews_block_attributes_title,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_title,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_link .sc_button_text,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_button > .trx_addons_reviews_block_attributes_title {
+    padding-right: 1em; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_value,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_button .trx_addons_reviews_block_attributes_value,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_value,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_button .trx_addons_reviews_block_attributes_value {
+    padding-left: 1em; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_line,
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_button > .trx_addons_reviews_block_attributes_line,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_line,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_row_type_button > .trx_addons_reviews_block_attributes_line {
+    border-bottom: 4px dotted var(--theme-color-bd_hover);
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 0.8em; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_button .trx_addons_reviews_block_attributes_value,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_button .trx_addons_reviews_block_attributes_value {
+    font-weight: 600;
+    margin-left: 1em; }
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_button .trx_addons_reviews_block_attributes_value:before,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_button .trx_addons_reviews_block_attributes_value:before {
+    content: '-';
+    margin-right: 1em; }
+
+@-moz-document url-prefix() {
+  .trx_addons_reviews_block_short .trx_addons_reviews_block_mark canvas,
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark canvas {
+    left: 50%; } }
+
+/* Reviews Short */
+.sidebar_hide.narrow_content .trx_addons_reviews_block.trx_addons_reviews_block_short {
+  margin-top: 0; }
+
+.trx_addons_reviews_block_short .trx_addons_reviews_block_title {
+  background-color: var(--theme-color-extra_bg_color);
+  color: var(--theme-color-extra_dark); }
+
+.trx_addons_reviews_block_short .trx_addons_reviews_block_title:after {
+  border-top-color: var(--theme-color-extra_bg_color); }
+
+.trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_button {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%; }
+
+.trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_title,
+.trx_addons_reviews_block_short .trx_addons_reviews_block_attributes_row_type_text .trx_addons_reviews_block_attributes_value {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  z-index: 1; }
+
+/* Reviews Detailed */
+.trx_addons_reviews_block_detailed {
+  clear: none;
+  margin-top: 2.7em;
+  margin-bottom: 2.7em; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_title {
+    background-color: var(--theme-color-bg_color);
+    color: var(--theme-color-text_dark);
+    margin: 3.05rem 3.15rem 0;
+    padding: 0 0 1.95rem;
+    position: relative; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_title:after {
+    border-color: var(--theme-color-bd_color);
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 1px 0;
+    content: '';
+    height: 2px; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_info {
+    padding: 1.9rem 3.15rem 1.4rem; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark_wrap {
+    width: 28%; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark {
+    display: block; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark_value {
+    margin-top: 0.1em; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_mark_text {
+    margin-top: 0; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_summary {
+    font-size: 1.07rem;
+    line-height: 1.733em;
+    letter-spacing: 0;
+    width: 71%; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_summary h6 {
+    margin-top: 0.95em; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_pn {
+    background-color: transparent;
+    color: var(--theme-color-text);
+    padding: 0;
+    margin-top: 1.95em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_pn .trx_addons_reviews_block_subtitle {
+      color: var(--theme-color-text_dark); }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_pn .trx_addons_reviews_block_list {
+      color: var(--theme-color-text);
+      font-size: 1.0714rem;
+      padding-left: 1.3em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_pn .trx_addons_reviews_block_list li + li {
+      margin-top: 0.35em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_pn .trx_addons_reviews_block_list li:before {
+      color: var(--theme-color-text_link3);
+      font-size: 1.4em;
+      font-weight: 400;
+      left: -0.8em;
+      top: -0.05em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_pn .trx_addons_reviews_block_positives,
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_pn .trx_addons_reviews_block_negatives {
+      padding: 0 0 1em;
+      width: 50%; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_footer_info {
+    background-color: var(--theme-color-alter_bg_color);
+    color: var(--theme-color-alter_dark);
+    margin: 0;
+    padding: 3.15rem; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias {
+    background-color: transparent;
+    color: inherit;
+    margin: 0;
+    padding: 0; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias .trx_addons_reviews_block_subtitle {
+      text-align: left;
+      margin-bottom: 1em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias .trx_addons_reviews_block_list li + li {
+      margin-top: 1.25em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias .trx_addons_reviews_block_list_title,
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias .trx_addons_reviews_block_list_mark_value {
+      font-size: 1.0714rem;
+      line-height: 1.5em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias .trx_addons_reviews_block_list_mark_value {
+      -webkit-transform: translateY(-0.3em);
+      -ms-transform: translateY(-0.3em);
+      transform: translateY(-0.3em);
+      display: inline-block; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias[data-mark-max="10"] [class*="trx_addons_reviews_block_list_mark_line"],
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias[data-mark-max="100"] [class*="trx_addons_reviews_block_list_mark_line"] {
+      bottom: -5px;
+      height: 2px; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias[data-mark-max="10"] .trx_addons_reviews_block_list_mark_line_hover,
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias[data-mark-max="100"] .trx_addons_reviews_block_list_mark_line_hover {
+      background-color: var(--theme-color-alter_link3); }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias[data-mark-max="10"] .trx_addons_reviews_block_list_mark_line,
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_criterias[data-mark-max="100"] .trx_addons_reviews_block_list_mark_line {
+      background-color: var(--theme-color-bg_color); }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes:not(:first-child) {
+    margin-top: 2.8em; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes + .trx_addons_reviews_block_buttons {
+    margin-top: 1.95em; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_buttons {
+    margin: 2.6em 0 0.85em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_buttons .trx_addons_reviews_block_subtitle {
+      margin-bottom: 1em; }
+    .trx_addons_reviews_block_detailed .trx_addons_reviews_block_buttons .trx_addons_reviews_block_button {
+      display: block;
+      width: 100%; }
+  .trx_addons_reviews_block_detailed .trx_addons_reviews_block_attributes_button {
+    width: 100%;
+    text-align: center; }
+
+/* Reviews Detailed with Image */
+.trx_addons_reviews_block_detailed.with_image .trx_addons_reviews_block_info {
+  padding: 0 5.6rem 1.55rem; }
+
+.trx_addons_reviews_block_detailed.with_image .trx_addons_reviews_block_mark_wrap,
+.trx_addons_reviews_block_detailed.with_image .trx_addons_reviews_block_summary {
+  padding: 0;
+  width: 100%; }
+
+.trx_addons_reviews_block_detailed.with_image .trx_addons_reviews_block_mark_wrap {
+  margin-top: -4.215rem; }
+
+.trx_addons_reviews_block_detailed.with_image .trx_addons_reviews_block_mark {
+  margin: auto; }
+
+.trx_addons_reviews_block_detailed.with_image .trx_addons_reviews_block_mark_content {
+  background-color: var(--theme-color-bg_color);
+  border-color: var(--theme-color-bg_color); }
+
+.trx_addons_reviews_block_detailed.with_image .trx_addons_reviews_block_footer_info {
+  background-color: transparent;
+  margin: 0;
+  padding: 0 5.6rem 4.25rem; }

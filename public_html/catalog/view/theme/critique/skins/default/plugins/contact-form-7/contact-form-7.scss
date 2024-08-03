@@ -1,0 +1,29 @@
+/* Contact form 7 styles
+----------------------------------------------------------------- */
+
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+div.wpcf7-response-output {
+	width: max-content;
+	margin: 2em 0;
+	@include font(14px, 1.4em, 400);
+	color: var(--theme-color-input_text);
+	letter-spacing: 0;
+	@include theme_field_template;
+}
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+	color: var(--theme-color-text_link);
+	border-color: var(--theme-color-text_link);
+}
+div.wpcf7-mail-sent-ok {
+	color: #398f14;
+}
+span.wpcf7-not-valid-tip {
+	@include font(14px, 1.4em, 400);
+	color: var(--theme-color-text_link);
+	letter-spacing: 0;
+	padding-left: 2.2rem;
+	margin-top: 0.5rem;
+}

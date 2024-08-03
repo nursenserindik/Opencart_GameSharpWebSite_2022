@@ -1,0 +1,20 @@
+.wp-core-ui select[multiple] {
+  height: auto !important; }
+  .wp-core-ui select[multiple] + .components-input-control__suffix {
+    display: none; }
+
+/* TRX Addons */
+.trx_addons_theme_panel_plugins_list_item_title {
+  font-size: 15px; }
+
+.trx_addons_icon_selector {
+  width: 36px;
+  height: 36px;
+  line-height: 36px !important; }
+
+.trx_addons_icon_selector:before {
+  line-height: 36px !important; }
+
+/* Customizer */
+#accordion-section-shop .accordion-section-title:before {
+  content: '\e96a'; }

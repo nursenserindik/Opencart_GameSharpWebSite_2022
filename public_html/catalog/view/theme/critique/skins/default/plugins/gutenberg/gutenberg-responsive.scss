@@ -1,0 +1,104 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+@media #{$media_xxl} {
+	/* Gutenberg */
+	body.edit-post-visual-editor {
+		line-height: 164.2857%;
+	}
+	.editor-post-sidebar-holder {
+		display: none !important;
+	}
+	.wp-block[data-align="left"] {
+		body.sidebar_position_hide.narrow_content & .is-style-alignfar {
+			margin-left: -11em;
+		}
+	}
+	.wp-block[data-align="right"] {
+		body.sidebar_position_hide.narrow_content & .is-style-alignfar {
+			margin-right: -11em;
+		}
+	}
+}
+
+@media #{$media_xl} {
+	/* Gutenberg */
+	.wp-block[data-align="left"] {
+		body.sidebar_position_hide.narrow_content & .is-style-alignfar {
+			margin-left: -8em;
+		}
+	}
+	.wp-block[data-align="right"] {
+		body.sidebar_position_hide.narrow_content & .is-style-alignfar {
+			margin-right: -8em;
+		}
+	}
+}
+
+@media #{$media_lg} {
+	/* Gutenberg */
+	body.edit-post-visual-editor {
+		font-size: 13px !important;
+		line-height: 161.54%;
+	}
+	.wp-block[data-align="left"] {
+		body.sidebar_position_hide.narrow_content & .is-style-alignfar {
+			margin-left: 0;
+		}
+	}
+	.wp-block[data-align="right"] {
+		body.sidebar_position_hide.narrow_content & .is-style-alignfar {
+			margin-right: 0;
+		}
+	}
+}
+
+@media #{$media_sm} {
+	/* Gutenberg */
+	.wp-block[data-align="left"],
+	.wp-block[data-align="right"] {
+		body.sidebar_position_hide.narrow_content & .is-style-alignfar,
+		body.sidebar_position_hide.normal_content & .is-style-alignfar {
+			max-width: none;
+			float: none;
+			margin: 0;
+		}
+	}
+	body.sidebar_hide.narrow_content .alignwide,
+	body.sidebar_hide.normal_content .alignwide {
+		left: 0;
+		width: 100%;
+	}
+
+	.alignfull .kt-row-column-wrap {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	.kt-row-column-wrap.kt-mobile-layout-row>.wp-block-kadence-column {
+		.alignleft, 
+		.has-text-align-left,
+		.alignright,
+		.has-text-align-right {
+		    text-align: center;
+
+		}
+	    .sc_slider_controls.sc_align_left .slider_controls_wrap {
+	        margin: auto;
+	    }
+	    p:last-child {
+		    margin-bottom: 0;
+		}
+	}
+}
+
+@media #{$media_xs} {
+	/* Gutenberg */
+	body.edit-post-visual-editor {
+		line-height: 153.84615%;
+	}
+	
+	.sidebar_hide.narrow_content .wp-block-kadence-rowlayout + .wp-block-kadence-spacer + [class*="is-style-align"] {
+	    margin-top: 0.6em !important;
+	}
+}

@@ -1,0 +1,108 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+.single_style_style-15 {
+	.page_content_wrap {
+		padding-top: 2.7em;
+	}
+
+	/* Gallery */
+	&.single-format-gallery {
+		.slider_container.slider_controls_side .slider_controls_wrap > a {
+			color: var(--theme-color-bg_color);
+		    background-color: var(--theme-color-text_dark);
+		    border-color: var(--theme-color-text_dark);
+		}
+		.slider_container.slider_controls_side .slider_controls_wrap > a:hover {
+		    background-color: var(--theme-color-text_link);
+		}
+	}
+
+	/* Banners */
+	.after_header_banner_wrap {
+	    margin-top: 2.8em;
+	}
+	.before_post_header_banner_wrap {
+	    margin-bottom: 2em;
+	}
+	.after_post_header_banner_wrap {
+	    margin-top: 1.7em;
+	    margin-bottom: 2.3em;
+	}
+}
+
+.post_header_wrap_style_style-15 {
+	position: relative;
+	margin-bottom: 4em;
+
+	/* Featured */	
+	.post_featured {
+		margin-bottom: 0; 
+		margin-top: 1.7em;
+		text-align: center;
+   		overflow: hidden;
+	}
+	.post_featured.post_featured_bg {
+		height: 57rem;
+	}
+	.post_featured.post_featured_bg:before {
+		display: none;
+	}
+	.post_featured img {
+		height: auto;
+		max-width: 100%; 
+		width: auto;
+	}
+	.post_audio_btn {
+		@include abs-cc;
+		z-index: 3;
+	}
+
+	/* Featured Audio */
+	.post_featured.with_audio.without_thumb {
+	    margin-left: auto;
+	    margin-right: auto;
+	    max-width: 100%;    
+	    left: auto;
+	    width: var(--theme-var-content_narrow);
+	}
+
+	/* Header */
+	.post_header {
+		margin-bottom: 0;
+		text-align: center;
+	}
+	.post_header .post_meta_categories {
+	    margin-bottom: 2.15em;
+	    margin-top: 0;
+	}
+	.post_header .post_meta_categories .post_categories,
+	.post_header .post_meta_categories .post_categories a {
+		color: var(--theme-color-text_link);	
+	}
+	.post_header .post_meta_categories .post_categories a:hover {
+		color: var(--theme-color-text_dark);	
+	}
+	.post_header .post_meta_categories,
+	.post_header .post_title,
+	.post_header .post_subtitle {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 55%;
+	}
+	.post_header .post_subtitle {
+		margin-top: 1.1em;
+	}
+	.post_header .post_meta_other {
+		@include flex-align-items(center);
+		@include flex-direction(row);
+		@include flex-justify-content(center);
+		@include flex-wrap(wrap);
+		@include flex;
+		margin-top: 1.7em;
+	}
+	.post_header .post_categories {
+		justify-content: center;
+	}
+}

@@ -1,0 +1,17 @@
+{
+    "exclude": {
+        "files": [
+            "skin.jpg",
+        	"skin-setup.php",
+        	"skin-demo-importer.php",
+            "css/__custom.css",
+        	"theme-specific/trx_addons-layouts.php",
+            "plugins/accelerated-mobile-pages/accelerated-mobile-pages.css",
+            "plugins/accelerated-mobile-pages/accelerated-mobile-pages.scss"
+        ],
+        "folders": [
+        	"theme-specific/theme-about",
+            "languages"
+        ]
+    }
+}

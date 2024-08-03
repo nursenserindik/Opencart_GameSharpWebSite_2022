@@ -1,0 +1,210 @@
+/* Blog layout: Excerpt 
+------------------------- */
+
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+.post_layout_excerpt {
+	position:relative;
+	margin-bottom:0;
+
+	& + .post_layout_excerpt {
+		margin-top: 4.25rem;
+	}
+	&:not(.sticky) + .post_layout_excerpt:not(.sticky) {
+	    padding-top: 4.25rem;
+	    border-top: 1px solid var(--theme-color-bd_color);
+	}
+	&.sticky {
+		padding: 3em;
+	}
+
+	/* Featured */
+	> .post_featured {
+		display: inline-block;
+    	margin-bottom: 36px;
+	}
+	&.post_format_audio > .post_featured.without_thumb,
+	&.post_format_gallery > .post_featured.without_thumb {
+		display:block;
+	}
+
+	/* Header */
+	> .post_header {
+		margin: 0;
+		position:relative;
+
+		.post_price {
+			width: auto;
+			@include abs-rt;
+			@include font(2.5em, 1.5em);
+		}
+		.post_category {
+			margin-bottom: 26px;
+		}
+		.post_category .post_meta {
+			margin-top: 0;
+		}
+		.post_categories a {
+			display: inline-block;
+			@include transition-all(0.3s, ease);
+			background-color: var(--theme-color-extra_bg_color);
+			color: var(--theme-color-extra_dark) !important;
+		    line-height: 1em;
+			margin-bottom: 2px; 
+            margin-left: 5px;   
+		    border-radius: 0;
+		    &:not(.trx_addons_extended_taxonomy_parent_bg) {
+                padding: 4.5px 15px;
+                transform: skew(20deg);
+            }
+            &.trx_addons_extended_taxonomy_parent_bg {
+                padding: 0; 
+                .trx_addons_extended_taxonomy {
+                    padding: 4.5px 15px; 
+                }
+            }
+            samp {
+                display: inline-block;
+                transform: skew(-20deg) !important;
+            }
+		}
+		.post_categories a:hover {
+			background-color: var(--theme-color-extra_hover);
+			color: var(--theme-color-extra_link) !important;
+		}
+		.post_title {
+			margin: 0;
+		}
+	}
+
+	/* Content */
+	> .post_header + .post_content {
+		margin-top: 20px;
+	}
+	> .post_content {
+		color: var(--theme-color-text);
+
+		.post_content_inner {
+		    font-size: 1.07142rem;
+		    line-height: 1.733em;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		/* Meta after content */
+		.post_content_inner + .post_meta {
+			margin-top: 22px;
+		}
+		.post_meta .post_author .post_author_avatar {
+			display: none;
+		}
+
+		/* Read More */
+		.more-link {
+			margin-top: 28px;
+		}
+		.post_meta + p .more-link {
+			margin-top: 30px;
+		}
+	}
+
+	/* Audio */
+	&.post_format_audio {
+		.post_featured:after {
+			@include abs-cc;
+			@include border-round;
+			@include square(3.715em);
+			@include transition(all ease 0.3s);
+			background-color: var(--theme-color-extra_dark);
+			color: var(--theme-color-extra_bg_color);
+			content: '\e9b7';
+			display: block;
+			font-family: $theme_icons;
+			font-size: 1rem;
+			opacity: 1;
+			text-align: center;
+   		 	z-index: 2;
+		}
+		.post_featured .mask {
+			display: none;
+		}
+		.post_audio {
+			display: none;
+		    background-color: var(--theme-color-alter_bg_color);
+		    padding: 0.8em;
+		}
+		.mejs-container {
+		    min-height: 40px;
+		}		
+	} 
+
+	/* Gallery */
+	&.post_format_gallery {
+		.post_featured.with_thumb .slider_outer {
+			z-index: 1;
+		}
+		.post_featured:after {
+			@include abs-cc;
+			@include border-round;
+			@include square(2.889em);
+			@include transition(all ease 0.3s);
+			background-color: var(--theme-color-extra_dark);
+			color: var(--theme-color-extra_bg_color);
+			content: '\e9b5';
+			display: block;
+			font-family: $theme_icons;
+			font-size: 1.2857rem;
+			opacity: 1;
+			text-align: center;
+   		 	z-index: 2;
+		}
+		.slider_pagination_wrap, 
+		.slider_controls_wrap {
+		    display: none;
+		}
+	}
+
+	/* Video */
+	&.post_format_video {
+		.post_featured.with_thumb .post_video_hover {
+			@include square(3.286rem);
+		    font-size: 1rem;
+		    text-align: center;
+		}
+	}
+
+	/* Rating */
+	.post_hover_rating {
+		@include abs-cc;
+		z-index: 2;
+		display: block;
+	}
+	.trx_addons_reviews_block_mark_value {
+		color: var(--theme-color-extra_bg_color);
+	    @include box(60px, 60px, 58px);
+	    border-width: 2px;
+	    font-size: 1.214rem;
+	    font-weight: 600;
+	}
+	.trx_addons_reviews_block_mark_value[data-max-value="100"]:after {
+	    font-size: 11px;
+	    line-height: 11px;
+	    margin: -9px -6px 0 2px;
+	    vertical-align: middle;
+	}
+	.trx_addons_reviews_block_mark canvas {
+		@include transform(translateX(-50%));
+	}
+	.trx_addons_reviews_block_mark_content {
+		border-width: 2px;
+	}
+}
+
+
+// First post large in the other blog styles
+.post_layout_excerpt blockquote {
+	margin: 0;
+}

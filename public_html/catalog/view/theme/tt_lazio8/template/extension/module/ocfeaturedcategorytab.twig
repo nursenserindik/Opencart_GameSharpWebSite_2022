@@ -1,0 +1,275 @@
+{% if status %}
+	{% if exist_fcate %}
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".featured-categorytab .tab_content_category").hide();
+				$(".featured-categorytab .tab_content_category:first").show();
+				$(".featured-category .tabs-featured:first").addClass("active");
+				$(".featured-categorytab div.featured-category div").click(function() {
+					$("div.featured-category div").removeClass("active");
+					$(this).addClass("active");
+					$(".featured-categorytab .tab_content_category").hide();
+					$(".featured-categorytab .tab_content_category").removeClass("animate1 {{ tab_effect }}");
+					var activeTab = $(this).attr("rel");
+					$(".featured-categorytab #" + activeTab).addClass("animate1 {{ tab_effect }}");
+					$(".featured-categorytab #" + activeTab).fadeIn();
+				});
+			});
+		</script>
+		{% set rows2 = 5 %}
+        {% set row = config_slide.f_rows %}
+        {% if not row %}
+            {% set row = 1 %}
+        {% endif %}
+<div class="product-tabs-category-container-slider featured-categorytab">
+	<div class="module-title">
+		<h2>{{ heading_title }}</h2>
+	</div>
+	<div class="featured-category-container">
+		<div class="row">
+			<div class="col-md-2 col-sm-12 col-sms-12">
+				<div class="featured-category-icon">
+					<div class="featured-category">
+					{% set count2 = 0 %}
+					{% for category in categories %}
+						{% if count2 % rows2 == 0 %}
+						<div class="row_items2">	
+						{% endif %}
+						{% set count2 = count2 + 1 %}
+							<div class="tabs-featured  tab_cate{{ category.category_id }}" rel="tab_fcate{{ category.category_id }}">
+								<div>
+									{% if category.homethumb_image %}
+										<img class="image" src="{{ category.homethumb_image }}" alt="" />
+									{% endif %}
+									<!-- {% if category.thumbnail_image %}
+										<img class="imagehover" src="{{ category.thumbnail_image }}" alt="" />
+									{% endif %} -->
+									<!-- <span>{{ category.name }}</span> -->
+								</div>
+							</div>
+						{% if (count2 % rows2 == 0) or (count2 == categories|length) %}
+						</div> <!-- row_items2 -->
+						{% endif %}
+					{% endfor %}
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-10 col-sm-12 col-sms-12">
+				<div class="tab_featured_category">
+					<div class="row">
+					{% for category in categories %}
+					<div id="tab_fcate{{ category.category_id }}" class="tab_content_category">
+						<div class="col-md-6 col-sm-12 col-sms-12">
+							<div class="featured-category-image"><img src="{{ module_image }}" alt="" /></div>
+						</div>
+						<div class="col-md-6 col-sm-12 col-sms-12">
+							{% set fproduct = category.fproduct %}
+							<div class="first-product">
+								<div class="item">
+									{% if config_slide.showlabel %}
+										{% if fproduct.is_new %}
+											{% if fproduct.special %}
+												<div class="label-pro-sale">{{ text_sale }}</div>
+											{% else %}
+												<div class="label-pro-new">{{ text_new }}</div>
+											{% endif %}
+										{% else %}
+											{% if fproduct.special %}
+												<div class="label-pro-sale">{{ text_sale }}</div>
+											{% endif %}
+										{% endif %}
+									{% endif %}
+									<div class="item-inner">
+										<div class="products-images">
+												<div class="image"><a href="{{ fproduct.href }}"><img class="image1" src="{{ fproduct.thumb }}" alt="{{ fproduct.name }}" />
+												{% if fproduct.rotator_image %}
+													<img class="image2" src="{{ fproduct.rotator_image }}" alt="" />
+												{% endif %}
+												</a></div>
+										</div>
+										<div class="box-content">
+											<div class="product-name"><a href="{{ fproduct.href }}">{{ fproduct.name }}</a></div>
+											{% if config_slide.showdes %}
+												<p class="product-des">{{ fproduct.description }}</p>
+											{% endif %}
+											{% if fproduct.rating %}
+												<div class="ratings">
+													<div class="rating-box">
+													{% for i in 0..5 %}
+														{% if product.rating == i %}
+														{% set class_r = "rating"~i %}
+														<div class="{{ class_r }}">rating</div>
+														{% endif %}
+													{% endfor %}
+													</div>
+												</div>	
+											{% endif %}
+											{% if config_slide.showprice %}
+												{% if fproduct.price %}
+													<div class="price">
+														{% if not fproduct.special %}
+															{{ fproduct.price }}
+														{% else %}
+															<span class="price-old">{{ fproduct.price }}</span> <span class="price-new">{{ fproduct.special }}</span>
+														{% endif %}
+													</div>
+												{% endif %}
+											{% endif %}
+										</div>
+									</div>
+								</div>
+							</div>
+							{% if category.efProducts %}
+							<div class="productTabContent owl-demo-tabcate owl-carousel owl-theme">
+								{% set products, i = category.efProducts, 0 %}
+								{% for product in products %}
+									{% if i % row == 0 %}<div class='row_item'>{% endif %}
+									{% set i = i + 1 %}
+									<div class="item">
+										{% if config_slide.showlabel %}
+											{% if product.is_new %}
+												{% if product.special %}
+													<div class="label-pro-sale">{{ text_sale }}</div>
+												{% else %}
+													<div class="label-pro-new">{{ text_new }}</div>
+												{% endif %}
+											{% else %}
+												{% if product.special %}
+													<div class="label-pro-sale">{{ text_sale }}</div>
+												{% endif %}
+											{% endif %}
+										{% endif %}
+										<div class="item-inner">
+											<div class="products-images">
+													<div class="image"><a href="{{ product.href }}"><img class="image1" src="{{ product.thumb }}" alt="{{ product.name }}" />
+													{% if product.rotator_image %}
+														<img class="image2" src="{{ product.rotator_image }}" alt="" />
+													{% endif %}
+													</a></div>
+											</div>
+											<div class="box-content">
+												<div class="product-name"><a href="{{ product.href }}">{{ product.name }}</a></div>
+												{% if config_slide.showdes %}
+													<p class="product-des">{{ product.description }}</p>
+												{% endif %}
+												{% if product.rating %}
+													<div class="ratings">
+														<div class="rating-box">
+														{% for i in 0..5 %}
+															{% if product.rating == i %}
+															{% set class_r = "rating"~i %}
+															<div class="{{ class_r }}">rating</div>
+															{% endif %}
+														{% endfor %}
+														</div>
+													</div>	
+												{% endif %}
+												{% if config_slide.showprice %}
+													{% if product.price %}
+														<div class="price">
+															{% if not product.special %}
+																{{ product.price }}
+															{% else %}
+																<span class="price-old">{{ product.price }}</span> <span class="price-new">{{ product.special }}</span>
+															{% endif %}
+														</div>
+													{% endif %}
+												{% endif %}
+												<div class="item-hover">
+													<div class="actions">
+														<div class="add-to-links">
+															<div class="wishlist">
+																<button type="button" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><span>{{ button_wishlist }}</span></button>
+															</div>
+															{% if config_slide.showaddtocart %}
+																<div class="cart">
+																<button type="button" title="{{ button_cart }}" onclick="cart.add('{{ product.product_id }}');"><span>{{ button_cart }}</span></button>
+																</div>
+															{% endif %}
+															<div class="compare">
+																<button type="button" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><span>{{ button_compare }}</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										</div>
+									{% if (i % row == 0) or (i == products|length) %}</div>{% endif %}
+								{% endfor %}
+							</div>
+						{% else %}
+							<p>{{ text_empty_products }}</p>
+						{% endif %}
+						</div>
+					</div>
+					{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	 <!-- .tab_container_category -->
+</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".featured-categorytab .owl-demo-tabcate").owlCarousel ({
+					autoplay: {% if config_slide.autoplay %} true {% else %} false {% endif %},
+					autoplaySpeed : {% if config_slide.speed %} {{ config_slide.speed }} {% else %} 3000 {% endif %},
+					navSpeed : {% if config_slide.speed %} {{ config_slide.speed }} {% else %} 3000 {% endif %},
+					dotsSpeed : {% if config_slide.speed %} {{ config_slide.speed }} {% else %} 3000 {% endif %},
+					nav : {% if config_slide.shownextback %} true {% else %} false {% endif %},
+					dots : {% if config_slide.shownav %} true {% else %} false {% endif %},
+					autoplayHoverPause : false,
+					responsive:{
+						0:{
+							items: 1
+						},
+						481:{
+							items: 2
+						},
+						769:{
+							items: 2
+						},
+						1024:{
+							items: 5
+						},
+						1200:{
+							items: {{ config_slide.items }}
+						},
+					}
+				});
+				$(".featured-categorytab .featured-category").owlCarousel ({
+					autoplay: {% if config_slide.autoplay %} true {% else %} false {% endif %},
+					autoplaySpeed : {% if config_slide.speed %} {{ config_slide.speed }} {% else %} 3000 {% endif %},
+					navSpeed : {% if config_slide.speed %} {{ config_slide.speed }} {% else %} 3000 {% endif %},
+					dotsSpeed : {% if config_slide.speed %} {{ config_slide.speed }} {% else %} 3000 {% endif %},
+					nav : {% if config_slide.shownextback %} true {% else %} false {% endif %},
+					dots : {% if config_slide.shownav %} true {% else %} false {% endif %},
+					autoplayHoverPause : false,
+					responsive:{
+						0:{
+							items: 1
+						},
+						481:{
+							items: 1
+						},
+						769:{
+							items: 1
+						},
+						1024:{
+							items: 1
+						},
+						1200:{
+							items: 1
+						},
+					}
+				});
+			});
+		</script>
+	{% else %}
+		<p class="category-not">{{ text_empty_categories }}</p>
+	{% endif %}
+{% endif %}

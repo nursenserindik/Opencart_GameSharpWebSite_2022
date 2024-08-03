@@ -1,0 +1,141 @@
+<footer>
+	{% if block4 %}
+		{{ block4 }}
+	{% endif %}
+	<div class="footer-static">
+		<div class="container">
+			<div class="container-inner">
+				<div class="row">
+					<div class="col-sm-12 col-md-8 col-xs-12">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-4">
+								{% if informations %}
+								<div class="col col1">
+									<div class="footer-title"><h2>{{ text_information }}</h2></div>
+									<div class="footer-content">
+										<ul class="list-unstyled">
+											{% for information in informations %}
+												<li><a href="{{ information.href }}">{{ information.title }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+								{% endif %}
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-4">
+								<div class="col col2">
+									<div class="footer-title"><h2>{{ text_extra }}</h2></div>
+									<div class="footer-content">
+										<ul class="list-unstyled">
+											<li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+											<li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+											<li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+											<li><a href="{{ special }}">{{ text_special }}</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-4">
+								<div class="col col3">
+									<div class="footer-title"><h2>{{ text_account }}</h2></div>
+									<div class="footer-content">
+										<ul class="list-unstyled">
+											<li><a href="{{ account }}">{{ text_account }}</a></li>
+											<li><a href="{{ order }}">{{ text_order }}</a></li>
+											<li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+											<li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 col-xs-12">
+						<div class="col col4">
+							<div class="footer-title">
+								<h2>{{ text_download_app }}</h2>
+							</div>
+							<div class="footer-content">
+								<div class="download-app">
+									<ul>
+										<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/app1.png" alt=""></a></li>
+										<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/app2.png" alt=""></a></li>
+									</ul>
+								</div>
+								{% if block5 %} {{ block5 }} {% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-linklogo">
+		<div class="container">
+			<div class="footer-logo">
+				<a href="#"><img src="catalog/view/theme/tt_lazio3/image/logo-footer.png" alt=""></a>
+			</div>
+			{% if block6 %} {{ block6 }} {% endif %}
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<div class="container-inner">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-sms-12">
+						<p class="copyright-text">{{ powered }}</p>
+					</div>
+					<div class="col-md-6 col-sm-6 col-sms-12">
+						<div class="footer-paypal">
+							<ul>
+								<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/paypal.jpg" alt="image"></a></li>
+								<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/paypal1.jpg" alt="image"></a></li>
+								<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/paypal2.jpg" alt="image"></a></li>
+								<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/paypal3.jpg" alt="image"></a></li>
+								<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/paypal4.jpg" alt="image"></a></li>
+								<li><a href="#"><img src="catalog/view/theme/tt_lazio3/image/paypal5.jpg" alt="image"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% if block7 %} {{ block7 }} {% endif %}
+	<div id="back-top">{{ text_backtop }}</div>
+</footer>
+<script type="text/javascript">
+$(document).ready(function(){
+	// hide #back-top first
+	$("#back-top").hide();
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 300) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-top').click(function () {
+			$('body,html').animate({scrollTop: 0}, 800);
+			return false;
+		});
+	});
+	if (jQuery(window).width() < 992) {   
+		jQuery('.footer-static .footer-title').click(function(){     
+			jQuery(this).parent('.col').toggleClass('active').siblings().removeClass('active'); 
+			jQuery(this).next('.col .footer-content').toggle(300);
+			jQuery(this).parent('.col.active').siblings().children('.col .footer-content').slideUp(300); 
+		}); 
+		 
+	}
+});
+</script>
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+</div><!-- wrapper -->
+</body></html>

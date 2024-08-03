@@ -1,0 +1,46 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+@media #{$media_xxl} {
+	.post_header_wrap_style_style-4 .post_featured.post_featured_bg {
+	    height: 47rem;
+	}
+}
+
+@media #{$media_xl} {	
+	.post_header_wrap_style_style-4 .post_featured.post_featured_bg {
+	    height: 37rem;
+	}
+}
+
+@media #{$media_md} {	
+	.post_header_wrap_style_style-4 .post_featured.post_featured_bg {
+	    height: 27rem;
+	}
+}
+
+@media #{$media_sm} {	
+	.post_header_wrap_style_style-4 .post_featured.post_featured_bg {
+	    height: 20rem;
+	}
+	.single_style_style-4 .page_content_wrap > {
+		.content_wrap:not(:empty),
+		.content_wrap_fullscreen {
+    		padding-top: 2em;
+    	}
+	}
+	.post_header_wrap_style_style-4 .post_header .post_meta_categories {
+		margin-bottom: 1.2em;
+	}
+}
+
+@media #{$media_xs} {		
+	.post_header_wrap_style_style-4 .post_featured.with_audio.without_thumb .post_audio:not(.with_iframe) {
+		padding: 20px;
+
+		.mejs-horizontal-volume-slider {
+		    display: none !important;
+		}
+	}
+}

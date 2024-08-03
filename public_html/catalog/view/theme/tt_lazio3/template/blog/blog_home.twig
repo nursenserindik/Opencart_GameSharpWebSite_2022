@@ -1,0 +1,79 @@
+<div id="blog_home" class="menu-recent owl-style3">
+	<div class="container">
+		<div class="blog-title module-title">
+		   <h2>{{ text_headingtitle }}</h2>
+		    <p class="module-description">{{ text_subtitle }}</p>
+		</div>
+	 	{% set count, rows = 0, slide.rows %}
+		{% if not rows %}
+			{% set rows = 1 %}
+		{% endif %}
+
+		{% if articles %}
+			<div class="articles-container owl-carousel owl-theme">
+			{% for article in articles %}
+				{% if count % rows == 0 %}
+				<div class="row_items">
+				{% endif %}
+				{% set count = count + 1 %}
+					<div class="articles-inner item-inner">
+						<div class="articles-image">
+							<img src="{{ article.image }}" alt="{{ article.name }}"/>
+						</div>
+						<div class="articles-date">
+							{{ article.date_added_m }}
+							<span>{{ article.date_added_d }}</span>
+						</div>
+						<div class="aritcles-content">
+							<a class="articles-name" href="{{ article.href }}">{{ article.name }}</a>
+							{% if article.author %}
+								{{ text_post_by }}
+								<span>{{ article.author }}</span>
+							{% endif %}							
+							<div class="articles-intro">{{ article.intro_text }}</div>
+							<div class="readmore"><a href="{{ article.href }}">{{ button_read_more }}</a></div>
+						</div>												
+					</div>
+				{% if (count % rows == 0) or (count == articles|length ) %}
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+		{% else %}
+			<p>{{ text_empty }}</p>
+		{% endif %}
+	</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".articles-container").owlCarousel({
+            autoPlay : {% if slide.auto %} true {% else %} false {% endif %},
+        	items : {{ slide['items'] }},
+			margin: 30,
+			loop: true,			
+			navSpeed : {{ slide['speed'] }},
+			dotsSpeed : {{ slide['speed'] }},
+			autoplaySpeed : {{ slide['speed'] }},
+			nav : {% if slide.navigation %} true {% else %} false {% endif %},
+			dots : {% if slide.pagination %} true {% else %} false {% endif %},
+			navText : ['<i class="ion-chevron-left"></i>','<i class="ion-chevron-right"></i>'],
+			responsive:{
+				0:{
+					items: 1
+				},
+				480:{
+					items: 1
+				},
+				640:{
+					items: 2
+				},
+				991:{
+					items: 2
+				},
+				1200:{
+					items: {{ slide['items'] }}
+				}
+			}
+    	});
+    });
+</script>

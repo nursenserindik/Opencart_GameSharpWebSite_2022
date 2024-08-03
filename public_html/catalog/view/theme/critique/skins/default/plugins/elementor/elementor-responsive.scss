@@ -1,0 +1,44 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+
+@media #{$media_xxl} {
+	.trx_addons_bg_text .trx_addons_bg_text_inner .trx_addons_bg_text_char {
+	    font-size: 215px;
+	}
+} 
+
+@media #{$media_xl} {
+	.trx_addons_bg_text .trx_addons_bg_text_inner .trx_addons_bg_text_char {
+	    font-size: 180px;
+    	line-height: 264px;
+	}
+}
+
+@media #{$media_lg} {
+	.trx_addons_bg_text .trx_addons_bg_text_inner .trx_addons_bg_text_char {
+	    font-size: 150px;
+	}
+	.elementor-spacer-1 .elementor-spacer-inner {
+		max-height: 10vh;
+	}
+}
+
+@media #{$media_md} {
+	.trx_addons_bg_text {
+		display: none;
+	}
+}
+
+@media #{$media_sm} {
+	/* Elementor */
+	:root {
+		--theme-var-elm_gap_narrow: 8px;
+		--theme-var-elm_gap_default: 10px;
+		--theme-var-elm_gap_extended: var(--theme-var-grid_gap);
+		--theme-var-elm_gap_wide: 30px;
+		--theme-var-elm_gap_wider: 40px;
+		--theme-var-elm_add_page_margins: var( --theme-var-elm_gap_extended );
+	}
+}

@@ -1,0 +1,95 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+.single_style_style-4 {
+	.page_content_wrap {
+		padding-top: 0;
+	}
+	.page_content_wrap > .content_wrap:not(:empty),
+	.page_content_wrap > .content_wrap_fullscreen {
+		padding-top: 3.3em;
+	}
+
+	/* Banners */
+	.after_header_banner_wrap {
+	    margin-top: 0;
+	}
+	.content .after_post_header_banner_wrap {
+	    margin-bottom: 2.8em;
+	}
+	.content .before_post_header_banner_wrap {
+	    margin-bottom: 2.5em;
+	}
+}
+.previous_post_content .post_header_wrap_style_style-4.post_header_wrap_in_header {
+	margin-bottom: 4em;
+}
+
+.post_header_wrap_style_style-4 {
+
+	/* Featured */	
+	.post_featured {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	.post_featured.post_featured_bg {
+		height: 57rem;
+	}
+	.post_featured.post_featured_bg:before {
+		display: none;
+	}
+	.post_featured img {
+		max-width: none;
+		width: 100%;
+	}
+	.post_audio_btn {
+		@include abs-cc;
+	}
+
+	/* Featured Audio */
+	.post_featured.with_audio.without_thumb {
+	    margin: 0 auto;
+	    max-width: 100%;
+	    width: var(--theme-var-page);
+	}
+
+	/* Header */
+	.post_header .post_meta_categories {
+		margin-bottom: 2.2em;
+	    margin-top: 0;
+	}
+	.post_header .post_meta_categories .post_categories,
+	.post_header .post_meta_categories .post_categories a {
+		color: var(--theme-color-text_link);	
+	}
+	.post_header .post_meta_categories .post_categories a:hover {
+		color: var(--theme-color-text_dark);	
+	}
+	.post_header .post_subtitle {
+		margin-top: 0.9em;
+	}
+	
+	.post_header .post_meta_other {
+		margin-top: 2.3em;
+		@include flex-align-items(center);
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include flex;
+	}	
+
+	&.post_header_wrap_in_header {
+		margin-top: 4em;
+	}
+	&.post_header_wrap_in_header.with_featured_image {
+		margin-top: 0;
+	}
+
+	/* Header in content */
+	&.post_header_wrap_in_content {
+		border-bottom: 1px solid var(--theme-color-bd_color);
+	    margin-bottom: 2.8em;
+	    padding-bottom: 1.75em;
+	}
+}
+

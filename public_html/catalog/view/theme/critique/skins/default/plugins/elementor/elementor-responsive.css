@@ -1,0 +1,28 @@
+@media (max-width: 1679px) {
+  .trx_addons_bg_text .trx_addons_bg_text_inner .trx_addons_bg_text_char {
+    font-size: 215px; } }
+
+@media (max-width: 1439px) {
+  .trx_addons_bg_text .trx_addons_bg_text_inner .trx_addons_bg_text_char {
+    font-size: 180px;
+    line-height: 264px; } }
+
+@media (max-width: 1279px) {
+  .trx_addons_bg_text .trx_addons_bg_text_inner .trx_addons_bg_text_char {
+    font-size: 150px; }
+  .elementor-spacer-1 .elementor-spacer-inner {
+    max-height: 10vh; } }
+
+@media (max-width: 1023px) {
+  .trx_addons_bg_text {
+    display: none; } }
+
+@media (max-width: 767px) {
+  /* Elementor */
+  :root {
+    --theme-var-elm_gap_narrow: 8px;
+    --theme-var-elm_gap_default: 10px;
+    --theme-var-elm_gap_extended: var(--theme-var-grid_gap);
+    --theme-var-elm_gap_wide: 30px;
+    --theme-var-elm_gap_wider: 40px;
+    --theme-var-elm_add_page_margins: var( --theme-var-elm_gap_extended ); } }

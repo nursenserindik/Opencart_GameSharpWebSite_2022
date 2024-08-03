@@ -1,0 +1,231 @@
+/* Blog layout: Portfolio
+------------------------- */
+
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+.post_layout_portfolio_4 .post_title {
+	font-size: 1.25em;
+}
+.portfolio-masonry_wrap.masonry_wrap {
+    margin-bottom: -30px;
+    
+    .masonry_item {
+        padding-bottom: 30px;
+    }
+}
+.post_layout_portfolio {
+    &.sticky:not(.post_layout_custom) {
+        padding: 22px;
+    }
+    .post_featured {
+        margin-bottom:0;
+    }
+    .post_featured img {
+        width: 100%;
+    }
+    .post_featured .mask {
+        opacity: 1;
+        z-index: 1001;
+    }
+    .post_featured a.icons {
+        z-index: 1003;
+    }
+
+    .post_featured .post_info {
+        @include abs-lb;
+        display: block;
+        font-size: inherit;
+        margin: 0;
+        opacity: 1;
+        text-align: left; 
+        top: auto;
+        transform: scale(1);
+        width: auto;
+        z-index: 1004;
+        padding: 2.142rem;
+        .post_title {
+            margin: 0;
+        }
+        .post_title,
+        .post_title a {
+            color: var(--theme-color-extra_dark)!important;
+        }
+        .post_title + .post_meta {
+            margin-top: 8px;
+        }
+        .post_meta a {
+            color: var(--theme-color-extra_dark);
+        }
+        .post_meta a:hover {
+            color: var(--theme-color-extra_hover);
+        }
+        .post_category {
+            margin-bottom: 14px;
+
+            .post_meta {
+                margin-top: 0;
+            }
+        }   
+        .post_category a {
+            @include transition(all 0.3s ease);
+            background-color: var(--theme-color-extra_bg_color);
+            color: var(--theme-color-extra_dark);
+            &:not(.trx_addons_extended_taxonomy_parent_bg) {
+                padding: 4.5px 15px;
+                transform: skew(20deg);
+            }
+            .trx_addons_extended_taxonomy_parent_bg {
+                padding: 0; 
+                .trx_addons_extended_taxonomy {
+                    padding: 4.5px 15px;    
+                }
+            }
+            samp {
+                display: inline-block;
+                transform: skew(-20deg) !important;
+            }
+        }
+        .post_category a:hover {
+            color: var(--theme-color-extra_dark);
+            background-color: var(--theme-color-extra_hover);
+        }
+        .post_category .post_sponsored_label {        
+            padding: 4.5px 15px;
+            line-height: 1em!important;
+            transform: skew(20deg);
+            color: var(--theme-color-extra_dark);
+            background-color: var(--theme-color-extra_hover);
+            samp {
+                display: inline-block;
+                transform: skew(-20deg);
+            }
+        }
+        .post_category a.post_sponsored_label:hover {
+            background-color: var(--theme-color-extra_bg_color);
+            color: var(--theme-color-extra_dark);
+        }
+        .post_author .post_author_name {
+            color: var(--theme-color-extra_dark);
+        }
+        .post_author:hover .post_author_name {
+            color: var(--theme-color-extra_hover);
+        }
+
+        .post_meta_categories {
+          margin-top: -0.5em !important; 
+        }
+        .post_meta_item.post_sponsored,
+        .post_meta_item.post_categories {
+          display: inline-flex;
+          flex-wrap: wrap; 
+        }
+        .post_meta_item.post_sponsored a,
+        .post_meta_item.post_categories a {
+          margin-top: 0.5em;
+          line-height: 1em; 
+        }
+    }  
+
+    /* Audio */
+    &.post_format_audio {
+        .post_featured:after {
+            @include abs-lt(2.142rem, 29px);
+            @include border-round;
+            @include square(3.715em);
+            @include transition(all ease 0.3s);
+            background-color: var(--theme-color-extra_dark);
+            color: var(--theme-color-extra_bg_color);
+            content: '\e9b7';
+            display: block;
+            font-family: $theme_icons;
+            font-size: 1rem;
+            opacity: 1;
+            text-align: center;
+            z-index: 1002;
+        }
+        .post_audio {
+            display: none;
+            background-color: var(--theme-color-alter_bg_color);
+            padding: 0.8em;
+        }
+        .mejs-container {
+            min-height: 40px;
+        }       
+    } 
+
+    /* Gallery */
+    &.post_format_gallery {
+        .post_featured:after {
+            @include abs-lt(2.142rem, 29px);
+            @include border-round;
+            @include square(2.889em);
+            @include transition(all ease 0.3s);
+            background-color: var(--theme-color-extra_dark);
+            color: var(--theme-color-extra_bg_color);
+            content: '\e9b5';
+            display: block;
+            font-family: $theme_icons;
+            font-size: 1.2857rem;
+            opacity: 1;
+            text-align: center;
+            z-index: 1002;
+        }
+        .slider_pagination_wrap, 
+        .slider_controls_wrap {
+            display: none;
+        }
+    }
+
+    /* Video */
+    &.post_format_video {
+        .post_featured.with_thumb .post_video_hover {
+            @include abs-lt(2.142rem, 29px);
+            transform: none;
+            z-index: 1005;
+
+            @include square(3.286rem);
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+
+    /* Rating */
+    .post_hover_rating {
+        @include abs-lt(2.142rem, 29px);
+        z-index: 1002;
+        display: block;
+    }
+    .trx_addons_reviews_block_mark_value {
+        color: var(--theme-color-extra_bg_color);
+        @include box(60px, 60px, 58px);
+        border-width: 2px;
+        font-size: 1.214rem;
+        font-weight: 600;
+    }
+    .trx_addons_reviews_block_mark_value[data-max-value="100"]:after {
+        font-size: 11px;
+        line-height: 11px;
+        margin: -9px -6px 0 2px;
+        vertical-align: middle;
+    }
+    .trx_addons_reviews_block_mark canvas {
+        @include transform(translateX(-50%));
+    }
+    .trx_addons_reviews_block_mark_content {
+        border-width: 2px;
+    }  
+}
+
+.post_layout_portfolio.resize {    
+    .post_featured {
+        overflow: hidden;
+        width: 100%;
+    }
+    .post_featured img {     
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }   
+} 
